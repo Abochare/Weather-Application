@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="bvideo.mp4" type="video/mp4">
+    </video>
+    
+    <div class="container">
+        
+        <form id="cityForm" class="search-box">
+            <i class='bx bx-map
+            '></i>
+            <input type="text" id="cityInput" name="city" placeholder="ENTER THE LOCATION" required>
+            <button type="submit" class="bx bx-search"></button>
+        </form>
+        <button id="toggleMapButton" class="toggle-map-button">Show Map</button>
+        <div id="map" style="height: 200px; width: 400px;"></div>
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="1.png"  id="image" alt="Weather Icon">
+                        <p id="temperature" class="temperature">-- <span>°C</span></p>
+                        <p id="description" class="description">--</p>
+                        <p id="minMaxTemp" class="min-max-temp">Min: -- °C | Max: -- °C</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span id="humidity">--%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span id="windSpeed">-- km/h</span>
+                    </div>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
